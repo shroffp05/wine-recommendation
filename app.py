@@ -48,7 +48,7 @@ button_github = dbc.Button(
     "View Code on github",
     outline=True,
     color="primary",
-    href="https://github.com/shroffp05",
+    href="https://github.com/shroffp05/wine-recommendation",
     id="gh-link",
     size="lg",
     className="button"
