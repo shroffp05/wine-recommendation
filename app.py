@@ -1,19 +1,16 @@
-import pandas as pd
-import numpy as np 
-import plotly.express as px 
-import dash_cytoscape as cyto 
 import dash 
-from dash import dcc 
+from dash import dcc, html, ctx
 import dash_bootstrap_components as dbc
-from dash import html 
 from dash.dependencies import Input, Output, State
-from dash import ctx 
 from dash.exceptions import PreventUpdate
+import dash_cytoscape as cyto 
+import math 
+import numpy as np 
 import os 
+import pandas as pd
+import plotly.express as px 
 import requests 
 from update_data_frame import update_df, feature_eng_data
-import math 
-
 
 # Instantiate the app
 app = dash.Dash(__name__
@@ -26,9 +23,9 @@ app.config["suppress_callback_exceptions"] = True
 
 #------ Reading and Updating Data 
 # Reading csv files.
-data = pd.read_csv('all_scraped_wine_info.csv') # contains all attributes of the wine
-recc = pd.read_csv('recommendation.csv') # contains data about top 5 recommendations 
-img_df = pd.read_csv('image_df.csv') # contains image links 
+data = pd.read_csv('data/all_scraped_wine_info.csv') # contains all attributes of the wine
+recc = pd.read_csv('data/recommendation.csv') # contains data about top 5 recommendations 
+img_df = pd.read_csv('data/image_df.csv') # contains image links 
 
 
 data, img_df, recc = update_df(data, img_df, recc)
