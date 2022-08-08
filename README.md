@@ -43,4 +43,4 @@ python app.py
 ```
 
 Dashboard:
-![Alt text](https://github.com/shroffp05/wine-recommendation/assets/dashboard-image?raw=true)
+![Alt text](https://github.com/shroffp05/wine-recommendation/blob/main/assets/dashboard-image.png?raw=true)
